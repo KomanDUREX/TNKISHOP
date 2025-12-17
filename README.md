@@ -1,32 +1,40 @@
 # TNKISHOP
 
-Кошик-магазин на Laravel — простий приклад e-commerce додатку з
-адмін-панеллю для керування товарами, категоріями та фільтрами.
+Лаконічний Laravel e‑commerce (каталог, кошик, адмін) — приклад для
+швидкого розгортання та подальшого розвитку.
 
-## 1. Опис проекту
+## Зміст
 
-- Laravel-проєкт для демонстрації каталогу товарів, кошика, профілю
-	користувача та простого адміністративного інтерфейсу.
+- Опис
+- Вимоги
+- Установка та запуск
+- Структура проекту
+- Контакти
 
-## 2. Вимоги
+## Опис
+
+TNKISHOP — невеликий магазин на Laravel з базовою адмін-панеллю для
+керування товарами, категоріями та фільтрами. Підходить як стартова
+база для навчальних проєктів або шаблон для власного магазину.
+
+## Вимоги
 
 - PHP 8.0+
 - Composer
-- MySQL або MariaDB
-- Node.js + npm (для збірки фронтенду)
-- Рекомендувані PHP-розширення: OpenSSL, PDO, Mbstring, Tokenizer, XML, Ctype, JSON
-- Git (для роботи з репозиторієм)
+- MySQL / MariaDB
+- Node.js + npm
+- Рекомендовані PHP-розширення: OpenSSL, PDO, Mbstring, Tokenizer, XML, Ctype, JSON
 
-## 3. Як встановити та запустити
+## Установка та запуск
 
-1. Клонувати репозиторій:
+1. Клонування репозиторію
 
 ```bash
 git clone https://github.com/KomanDUREX/TNKISHOP.git
 cd TNKISHOP
 ```
 
-2. Встановити залежності PHP:
+2. PHP-залежності та налаштування
 
 ```bash
 composer install
@@ -34,55 +42,60 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-3. Налаштувати `.env` (база даних, пошта тощо), потім виконати міграції та сидування:
+Налаштуйте `.env` (DB_* та інші параметри). Далі запустіть міграції і сидери:
 
 ```bash
 php artisan migrate --seed
 ```
 
-4. Встановити залежності фронтенду та зібрати ресурси:
+3. Фронтенд
 
 ```bash
 npm install
-npm run build   # або `npm run dev` для розробки
+npm run build    # або `npm run dev` для розробки
 ```
 
-5. Запустити локальний сервер:
+4. Локальний сервер
 
 ```bash
 php artisan serve
 # Відкрити http://127.0.0.1:8000
 ```
 
-Примітка: якщо ваш GitHub-репозиторій приватний, налаштуйте автентифікацію (SSH ключі або PAT).
+## Структура проекту (корінь)
 
-## 4. Повна структура проекту (корінь)
+```
+app/
+	Http/
+		Controllers/
+		Middleware/
+	Models/
+	Providers/
+bootstrap/
+config/
+database/
+	migrations/
+	seeders/
+public/
+resources/
+	views/
+	js/
+	css/
+routes/
+storage/
+tests/
+composer.json
+package.json
+artisan
+README.md
+```
 
-- app/
-	- Http/
-		- Controllers/
-		- Middleware/
-	- Models/
-	- Providers/
-- bootstrap/
-- config/
-- database/
-	- migrations/
-	- seeders/
-- public/
-- resources/
-	- views/
-	- js/
-	- css/
-- routes/
-- storage/
-- tests/
-- composer.json
-- package.json
-- artisan
-- README.md
+## Контакти
 
-----
+Автор: KomanDUREX — novikov.vlad09743@gmail.com
 
-Якщо потрібно, можу розширити README: додати приклади .env, секцію про тестування або GitHub Actions.
+---
+
+Потрібно додати приклад `.env`, інструкцію по тестуванню або CI (GitHub
+Actions)? Напишіть бажані секції — додам.
 # TNKISHOP
